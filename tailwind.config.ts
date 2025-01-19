@@ -19,6 +19,10 @@ const config = {
     },
     extend: {
       colors: {
+        customDark: '#010816',
+        'custom-dark-bg': 'hsl(222.2, 84%, 4.9%)', // Warna untuk mode gelap
+        'custom-teal': '#549cac',
+        customBlue: '#e4ecfc',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

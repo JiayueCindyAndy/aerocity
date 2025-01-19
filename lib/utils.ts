@@ -6,6 +6,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const formatter = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD"
+  style: "decimal",
+  maximumFractionDigits: 0 // Menghapus angka desimal
 });
+
+export const formatToIDR = (value: number): string => `${formatter.format(value)} IDR`;
+

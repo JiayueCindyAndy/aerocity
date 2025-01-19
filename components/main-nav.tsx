@@ -19,34 +19,69 @@ export function MainNav({
         },
         {
             href: `/${params.storeId}/billboards`,
-            label: 'Billboards',
+            label: 'Homepage',
             active: pathname === `/${params.storeId}/billboards`,
         },
         {
             href: `/${params.storeId}/categories`,
-            label: 'Categories',
+            label: 'Categories',    
             active: pathname === `/${params.storeId}/categories`,
         },
         {
-            href: `/${params.storeId}/sizes`,
-            label: 'Sizes',
-            active: pathname === `/${params.storeId}/sizes`,
+            href: `/${params.storeId}/dailyReports`,
+            label: 'Manage Reports',    
+            active: pathname === `/${params.storeId}/dailyReports`,
         },
         {
-            href: `/${params.storeId}/colors`,
-            label: 'Colors',
-            active: pathname === `/${params.storeId}/colors`,
+            href: `/${params.storeId}/customer`,
+            label: 'Customer',    
+            active: pathname === `/${params.storeId}/customer`,
         },
         {
-            href: `/${params.storeId}/products`,
-            label: 'Products',
-            active: pathname === `/${params.storeId}/products`,
+            href: `/${params.storeId}/pelanggan`,
+            label: 'Pelanggan',    
+            active: pathname === `/${params.storeId}/pelanggan`,
         },
         {
-            href: `/${params.storeId}/orders`,
-            label: 'Orders',
-            active: pathname === `/${params.storeId}/orders`,
+            href: `/${params.storeId}/standMeter`,
+            label: 'Stand Meter',    
+            active: pathname === `/${params.storeId}/standMeter`,
         },
+        {
+            href: `/${params.storeId}/catatMeter`,
+            label: 'Catat Meter',    
+            active: pathname === `/${params.storeId}/catatMeter`,
+        },
+        {
+            href: `/${params.storeId}/reportMaintenanceByArea`,
+            label: 'Maintenance Area',    
+            active: pathname === `/${params.storeId}/reportMaintenanceByArea`,
+        },
+        {
+            href: `/${params.storeId}/reportMaintenanceByCategory`,
+            label: 'Maintenance Category',    
+            active: pathname === `/${params.storeId}/reportMaintenanceByCategory`,
+        },
+        // {
+        //     href: `/${params.storeId}/sizes`,
+        //     label: 'Length',
+        //     active: pathname === `/${params.storeId}/sizes`,
+        // },
+        // {
+        //     href: `/${params.storeId}/colors`,
+        //     label: 'Type',
+        //     active: pathname === `/${params.storeId}/colors`,
+        // },
+        // {
+        //     href: `/${params.storeId}/products`,
+        //     label: 'Waters',
+        //     active: pathname === `/${params.storeId}/products`,
+        // },
+        // {
+        //     href: `/${params.storeId}/orders`,
+        //     label: 'Reports',
+        //     active: pathname === `/${params.storeId}/orders`,
+        // },
         {
             href: `/${params.storeId}/settings`,
             label: 'Settings',
@@ -56,7 +91,7 @@ export function MainNav({
 
     return (
        <nav
-        className={cn("flex items-center space-x-4 lg:space-x-6", className)}
+        className={cn("flex my-4 items-center flex-col space-y-4 lg:space-x-0", className)}
        >
         {routes.map((route) => (
             <Link

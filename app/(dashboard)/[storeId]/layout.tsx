@@ -29,8 +29,10 @@ export default async function DashboardLayout({
 
     return (
         <>
-            <Navbar />
-            {children}
-        </>
+        <div className=" dark:bg-customDark grid grid-cols-[1fr_6fr] h-screen w-full">
+        <Navbar />
+        {children}
+        </div>
+    </>
     );
 };

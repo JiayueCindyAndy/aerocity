@@ -38,6 +38,29 @@
       --input: 214.3 31.8% 91.4%;
       --ring: 222.2 84% 4.9%;
 
+      --chart-1: 220 58% 50%;
+      --chart-2: 0 0% 100%;
+      --chart-3: 197 37% 24%;
+      --chart-4: 43 74% 66%;
+      --chart-5: 27 87% 67%;
+
+      --color-strokeDashArray: #FFFF; /* Default untuk light mode */
+      --color-axis: #888888;
+      --color-line: #3498db;
+      --color-dot: #3498db;
+
+      --chart-reportMaintenance: 43 98% 50%;
+      --chart-2-reportMaintenance: 180 60% 50%;
+      --chart-3-reportMaintenance: 164 96% 41%;
+      --chart-4-reportMaintenance: 0 0% 64%;
+      --chart-5-reportMaintenance: 349 77% 62%;
+
+      --chart-1-reportMaintenanceByArea: 0 0% 77%;
+      --chart-2-reportMaintenanceByArea: 12 76% 61%;
+      --chart-3-reportMaintenanceByArea: 197 37% 24%;
+      --chart-4-reportMaintenanceByArea: 43 74% 66%;
+      --chart-5-reportMaintenanceByArea: 27 87% 67%;
+
       --radius: 0.5rem;
     }
 
@@ -69,6 +92,23 @@
       --border: 217.2 32.6% 17.5%;
       --input: 217.2 32.6% 17.5%;
       --ring: 212.7 26.8% 83.9%;
+
+      --chart-1: 700 0% 100%;
+      --chart-5: 100 60% 45%;
+      --chart-3: 90 80% 55%;
+      --chart-4: 400 65% 60%;
+      --chart-2: 190 75% 55%;
+
+      --color-strokeDashArray: 222.2 84% 4.9% /* Untuk dark mode */
+      --color-axis: #bbbbbb;
+      --color-line: #1abc9c;
+      --color-dot: #1abc9c;
+
+      --chart-reportMaintenance: 43 98% 50%;
+      --chart-2-reportMaintenance: 180 60% 50%;
+      --chart-3-reportMaintenance: 164 96% 41%;
+      --chart-4-reportMaintenance: 0 0% 64%;
+      --chart-5-reportMaintenance: 349 77% 62%;
     }
   }
 

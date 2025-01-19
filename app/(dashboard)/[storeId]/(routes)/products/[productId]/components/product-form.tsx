@@ -28,7 +28,7 @@ import {
     FormItem, 
     FormLabel, 
     FormMessage
-} from "@/components/ui/form";
+} from "@/components/ui/form";     
 import { AlertModal } from "@/components/modals/alert-modal";
 import ImageUpload from "@/components/ui/image-upload";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -67,8 +67,8 @@ export const ProductForm: React.FC<ProductFormProps> = ({
     const [open, setOpen] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const title = initialData ? "Edit product" : "Create product";
-    const description = initialData ? "Edit a product" : "Add a new product";
+    const title = initialData ? "Edit product" : "Create";
+    const description = initialData ? "Edit a product" : "Add a new";
     const toastMessage = initialData ? "Product updated." : "Product created.";
     const action = initialData ? "Save changes" : "Create";
 
@@ -83,7 +83,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
             price: 0,
             categoryId: '',
             colorId: '',
-            sizeId: '',
+            sizeId: '',     
             isFeatured: false,
             isArchived: false,
         }
@@ -181,12 +181,13 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                                 </FormItem>
                             )}
                         />
+                       
                         <FormField 
                             control={form.control}
                             name="price"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Price</FormLabel>
+                                    <FormLabel>Stand Akhir</FormLabel>
                                     <FormControl>
                                         <Input type="number" disabled={loading} placeholder="9. 99" {...field}/>
                                     </FormControl>
@@ -269,7 +270,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                             name="colorId"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Color</FormLabel>
+                                    <FormLabel>Id Pelanggan</FormLabel>
                                     <Select 
                                         disabled={loading}
                                         onValueChange={field.onChange} 
