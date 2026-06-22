@@ -33,26 +33,26 @@ export async function PATCH (
         const { userId } = auth();
         const body = await req.json();
 
-        const { validasi, pembersihan, penggunaan, perencanaan } = body; 
+        const { inspeksi, kalibrasi, pembersihan, penggantian } = body; 
 
         if (!userId) {
             return new NextResponse("Unauthenticated", { status: 401 });
         }
 
-        if (!validasi) {
-            return new NextResponse("Validasi is required", { status: 400});
+        if (!inspeksi) {
+            return new NextResponse("Inspeksi is required", { status: 400});
+        }
+
+        if (!kalibrasi) {
+            return new NextResponse("Kalibrasi is required", { status: 400});
         }
 
         if (!pembersihan) {
             return new NextResponse("Pembersihan is required", { status: 400});
         }
 
-        if (!penggunaan) {
-            return new NextResponse("Penggunaan is required", { status: 400});
-        }
-
-        if (!perencanaan) {
-            return new NextResponse("Perencanaan is required", { status: 400});
+        if (!penggantian) {
+            return new NextResponse("Penggantian is required", { status: 400});
         }
 
         if (!params.reportMaintenanceByCategoryId) { 
@@ -75,10 +75,10 @@ export async function PATCH (
                 id: params.reportMaintenanceByCategoryId,
             },
             data: {
-                validasi,
+                inspeksi,
+                kalibrasi,
                 pembersihan,
-                penggunaan,
-                perencanaan
+                penggantian
             }
         });
 

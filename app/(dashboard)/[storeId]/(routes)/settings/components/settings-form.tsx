@@ -89,7 +89,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
             <div className="flex items-center justify-between">
                 <Heading
                     title="Settings"
-                    description="Manage store prefences"
+                    description=""
                 />
                 <Button
                     disabled={loading}

@@ -17,36 +17,36 @@ export function MainNav({
             label: 'Overview',
             active: pathname === `/${params.storeId}`,
         },
-        {
-            href: `/${params.storeId}/billboards`,
-            label: 'Homepage',
-            active: pathname === `/${params.storeId}/billboards`,
-        },
-        {
-            href: `/${params.storeId}/categories`,
-            label: 'Categories',    
-            active: pathname === `/${params.storeId}/categories`,
-        },
+        // {
+        //     href: `/${params.storeId}/billboards`,
+        //     label: 'Homepage',
+        //     active: pathname === `/${params.storeId}/billboards`,
+        // },
+        // {
+        //     href: `/${params.storeId}/categories`,
+        //     label: 'Categories',    
+        //     active: pathname === `/${params.storeId}/categories`,
+        // },
         {
             href: `/${params.storeId}/dailyReports`,
             label: 'Manage Reports',    
             active: pathname === `/${params.storeId}/dailyReports`,
         },
-        {
-            href: `/${params.storeId}/customer`,
-            label: 'Customer',    
-            active: pathname === `/${params.storeId}/customer`,
-        },
+        // {
+        //     href: `/${params.storeId}/customer`,
+        //     label: 'Customer',    
+        //     active: pathname === `/${params.storeId}/customer`,
+        // },
         {
             href: `/${params.storeId}/pelanggan`,
             label: 'Pelanggan',    
             active: pathname === `/${params.storeId}/pelanggan`,
         },
-        {
-            href: `/${params.storeId}/standMeter`,
-            label: 'Stand Meter',    
-            active: pathname === `/${params.storeId}/standMeter`,
-        },
+        // {
+        //     href: `/${params.storeId}/standMeter`,
+        //     label: 'Stand Meter',    
+        //     active: pathname === `/${params.storeId}/standMeter`,
+        // },
         {
             href: `/${params.storeId}/catatMeter`,
             label: 'Catat Meter',    

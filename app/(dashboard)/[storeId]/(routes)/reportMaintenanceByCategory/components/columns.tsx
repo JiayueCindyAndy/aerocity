@@ -7,29 +7,29 @@ import { CellAction } from "./cell-action"
 // You can use a Zod schema here if you want.
 export type ReportMaintenanceByCategoryCollumn = {
   id: string
-  validasi: string
+  inspeksi: string
+  kalibrasi: string
   pembersihan: string
-  penggunaan: string
-  perencanaan: string
+  penggantian: string
   createdAt: string
 }
 
 export const columns: ColumnDef<ReportMaintenanceByCategoryCollumn>[] = [
   {
-    accessorKey: "validasi",
-    header: "Validasi",
+    accessorKey: "inspeksi",
+    header: "Inspeksi",
+  },
+  {
+    accessorKey: "kalibrasi",
+    header: "Kalibrasi",
   },
   {
     accessorKey: "pembersihan",
     header: "Pembersihan",
   },
   {
-    accessorKey: "penggunaan",
-    header: "Penggunaan",
-  },
-  {
-    accessorKey: "perencanaan",
-    header: "Perencanaan",
+    accessorKey: "penggantian",
+    header: "Penggantian",
   },
   {
     accessorKey: "createdAt",

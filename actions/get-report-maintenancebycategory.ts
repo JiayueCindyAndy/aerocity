@@ -8,24 +8,24 @@ export const getReportMaintenanceByCategoryData = async (storeId: string) => {
   });
 
   const totals = {
-    Validasi: 0,
+    Inspeksi: 0,
+    Kalibrasi: 0,
     Pembersihan: 0,
-    Penggunaan: 0,
-    Perencanaan: 0,
+    Penggantian: 0,
   };
 
   for (const record of maintenanceData) {
-    totals.Validasi += Number(record.validasi);
+    totals.Inspeksi += Number(record.inspeksi);
+    totals.Kalibrasi += Number(record.kalibrasi);
     totals.Pembersihan += Number(record.pembersihan);
-    totals.Penggunaan += Number(record.penggunaan);
-    totals.Perencanaan += Number(record.perencanaan);
+    totals.Penggantian += Number(record.penggantian);
   }
 
   // Tambahkan warna untuk masing-masing kategori
   return [
-    { name: "Validasi", total: totals.Validasi, fill: "#04CD97" },
-    { name: "Pembersihan", total: totals.Pembersihan, fill: "#FCB603" },
-    { name: "Penggunaan", total: totals.Penggunaan, fill: "#33CCCC" },
-    { name: "Perencanaan", total: totals.Perencanaan, fill: "#A3A3A3" },
+    { name: "Inspeksi", total: totals.Inspeksi, fill: "#04CD97" },
+    { name: "Penggantian", total: totals.Penggantian, fill: "#FCB603" },
+    { name: "Pembersihan", total: totals.Pembersihan, fill: "#33CCCC" },
+    { name: "Kalibrasi", total: totals.Kalibrasi, fill: "#A3A3A3" },
   ];
 };

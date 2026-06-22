@@ -20,10 +20,10 @@ const ReportMaintenanceByCategorysPage = async ({
 
     const formattedReportMaintenanceByCategorys: ReportMaintenanceByCategoryCollumn[] = reportMaintenanceByCategory.map((item) => ({
         id: item.id,
-        validasi: item.validasi.toString(),
+        inspeksi: item.inspeksi.toString(),
+        kalibrasi: item.kalibrasi.toString(),
         pembersihan: item.pembersihan.toString(),
-        penggunaan: item.penggunaan.toString(),
-        perencanaan: item.perencanaan.toString(),
+        penggantian: item.penggantian.toString(),
         createdAt: format(item.createdAt, "MMMM do, yyyy")
     }));
 

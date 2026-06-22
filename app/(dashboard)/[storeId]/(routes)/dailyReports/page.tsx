@@ -5,6 +5,7 @@ import { DailyReportClient } from "./components/client";
 import { DailyReportCollumn } from "./components/columns";
 import { formatter, formatToIDR } from "@/lib/utils";
 import { formatterMetter } from "@/lib/utilsMeter";
+import { formatterCentimeter } from "@/lib/utilsCentiMeter";
 
 const DailyReportsPage = async ({
     params
@@ -25,10 +26,10 @@ const DailyReportsPage = async ({
         idCater: item.idCater,
         nama: item.nama,
         standAkhir: item.standAkhir.toString(),
-        pemakaian: formatterMetter.format(item.pemakaian.toNumber()),
+        pemakaian: item.pemakaian.toString(),
         layanan: item.layanan.toString(),
         // pemakaian: formatToIDR(item.pemakaian.toNumber()),
-        ketinggianAir: formatterMetter.format(item.ketinggianAir.toNumber()),
+        ketinggianAir: formatterCentimeter.format(item.ketinggianAir.toNumber()),
         pembayaranAir: formatToIDR(item.pembayaranAir.toNumber()),
         imageUrl: item.imageUrl,
         createdAt: format(item.createdAt, "MMMM do, yyyy")

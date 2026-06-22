@@ -78,10 +78,10 @@ model ReportMaintenanceByCategory {
   id        String @id @default(uuid())
   storeId   String
   store     Store @relation("StoreToReportMaintenanceByCategory", fields: [storeId], references: [id])
-  validasi Decimal
+  inspeksi Decimal
+  kalibrasi Decimal
   pembersihan Decimal
-  penggunaan Decimal
-  perencanaan Decimal
+  penggantian Decimal
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 

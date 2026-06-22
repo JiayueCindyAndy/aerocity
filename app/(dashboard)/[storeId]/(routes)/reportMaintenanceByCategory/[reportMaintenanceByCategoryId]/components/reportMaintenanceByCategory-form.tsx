@@ -25,10 +25,10 @@ import { AlertModal } from "@/components/modals/alert-modal";
 import ImageUpload from "@/components/ui/image-upload";
 
 const formSchema = z.object({
-    validasi: z.coerce.number(),
+    inspeksi: z.coerce.number(),
+    kalibrasi: z.coerce.number(),
     pembersihan: z.coerce.number(),
-    penggunaan: z.coerce.number(),
-    perencanaan: z.coerce.number(),
+    penggantian: z.coerce.number(),
 });
 
 type ReportMaintenanceByCategoryFormValues = z.infer<typeof formSchema>;
@@ -55,15 +55,15 @@ export const ReportMaintenanceByCategoryForm: React.FC<ReportMaintenanceByCatego
                 resolver: zodResolver(formSchema),
                 defaultValues: initialData ? {
                     ...initialData,
-                    validasi: parseFloat(String(initialData?.validasi)),
+                    inspeksi: parseFloat(String(initialData?.inspeksi)),
+                    kalibrasi: parseFloat(String(initialData?.kalibrasi)),
                     pembersihan: parseFloat(String(initialData?.pembersihan)),
-                    penggunaan: parseFloat(String(initialData?.penggunaan)),
-                    perencanaan: parseFloat(String(initialData?.perencanaan)),
+                    penggantian: parseFloat(String(initialData?.penggantian)),
                 } : {
-                    validasi: 0,
+                    inspeksi: 0,
+                    kalibrasi: 0,
                     pembersihan: 0,
-                    penggunaan: 0,
-                    perencanaan: 0
+                    penggantian: 0
                 }
             });
 
@@ -130,10 +130,23 @@ export const ReportMaintenanceByCategoryForm: React.FC<ReportMaintenanceByCatego
                     <div className="grid grid-cols-3 gap-8">
                         <FormField 
                             control={form.control}
-                            name="validasi"
+                            name="inspeksi"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Validasi</FormLabel>
+                                    <FormLabel>Inspeksi</FormLabel>
+                                    <FormControl>
+                                        <Input type="number" disabled={loading} placeholder="9. 99" {...field}/>
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        <FormField 
+                            control={form.control}
+                            name="kalibrasi"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Kalibrasi</FormLabel>
                                     <FormControl>
                                         <Input type="number" disabled={loading} placeholder="9. 99" {...field}/>
                                     </FormControl>
@@ -156,23 +169,10 @@ export const ReportMaintenanceByCategoryForm: React.FC<ReportMaintenanceByCatego
                         />
                         <FormField 
                             control={form.control}
-                            name="penggunaan"
+                            name="penggantian"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Penggunaan</FormLabel>
-                                    <FormControl>
-                                        <Input type="number" disabled={loading} placeholder="9. 99" {...field}/>
-                                    </FormControl>
-                                    <FormMessage />
-                                </FormItem>
-                            )}
-                        />
-                        <FormField 
-                            control={form.control}
-                            name="perencanaan"
-                            render={({ field }) => (
-                                <FormItem>
-                                    <FormLabel>Perencanaan</FormLabel>
+                                    <FormLabel>Penggantian</FormLabel>
                                     <FormControl>
                                         <Input type="number" disabled={loading} placeholder="9. 99" {...field}/>
                                     </FormControl>
